@@ -1,0 +1,22 @@
+{
+  "name": "modernautomationtestingframeworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinchol12/modernAutomationTestingFrameworks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinchol12/modernAutomationTestingFrameworks/issues"
+  },
+  "homepage": "https://github.com/tinchol12/modernAutomationTestingFrameworks#readme",
+  "dependencies": {
+    "cypress": "^10.3.0"
+  }
+}
