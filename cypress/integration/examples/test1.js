@@ -126,7 +126,6 @@ describe('My first Test Suite', () => {
         cy.contains('PROCEED TO CHECKOUT').click();       
         cy.contains('Place Order').click();
 
-
     });
 
 })
