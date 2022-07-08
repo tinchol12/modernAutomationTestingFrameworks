@@ -4,7 +4,7 @@
 describe('My first Test Suite', () => {
     
     
-    it('Usar la barra de tareas usando el Cypress selector', () => {
+    it('Using the Cypress tool bar', () => {
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get('.search-keyword').type('cu');
@@ -13,7 +13,7 @@ describe('My first Test Suite', () => {
 
     });
 
-    it('Usar la barra de tareas usando Attribute selector', () => {
+    it('Using the tool bar with the Attribute selector', () => {
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get("[placeholder='Search for Vegetables and Fruits']").type('ca');
@@ -21,7 +21,7 @@ describe('My first Test Suite', () => {
         cy.get('.product:visible').should('have.length', 4);
     });
 
-    it('Seleccionar uno de los productos', () => {
+    it('Select products from a component', () => {
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get("[placeholder='Search for Vegetables and Fruits']").type('ca');
@@ -31,7 +31,7 @@ describe('My first Test Suite', () => {
         cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click();
     });
 
-    it('Seleccionar de manera dinamica uno de los productos (each) I', () => {
+    it('Dynamic selection from products (each) I', () => {
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get("[placeholder='Search for Vegetables and Fruits']").type('ca');
@@ -59,7 +59,7 @@ describe('My first Test Suite', () => {
 
     });
 
-    it('Obtener el título y mostrarlo en los eventos de Cypress ', () => {
+    it('Get a Title and show it in Cypress events', () => {
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
  
@@ -102,7 +102,7 @@ describe('My first Test Suite', () => {
 
     });
 
-    it.only('Checkout con validaciones', () => {
+    it('Validations', () => {
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get("[placeholder='Search for Vegetables and Fruits']").type('ca');
