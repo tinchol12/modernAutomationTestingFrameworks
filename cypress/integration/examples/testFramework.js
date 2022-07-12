@@ -1,4 +1,7 @@
 /// <reference types="Cypress" />
+import Homepage from '../PageObjetc/homepage.js'
+import Productpage from '../PageObjetc/productpage.js'
+
 
 
 describe('Framework tests', () => {
@@ -11,12 +14,13 @@ describe('Framework tests', () => {
     })
     
     it('framework tests - regular completition', () => {
+        const homePage = new Homepage();
     
         cy.visit('https://rahulshettyacademy.com/angularpractice/');
-        cy.get('[name="name"]:nth-child(2)').type('Bob');
+        homePage.getEditBox().type('Bob');
         cy.get(':nth-child(2) > .form-control').type('bob@gmail.com');
         cy.get('[id="exampleInputPassword1"]').type('12345');
-        cy.get('select').select("Female");
+        homePage.getGender().select("Female");
 
     });
 
@@ -32,15 +36,17 @@ describe('Framework tests', () => {
 
     it('framework tests - regular completition - adding assertions', () => {
     
-        cy.visit('https://rahulshettyacademy.com/angularpractice/');
-        cy.get('[name="name"]:nth-child(2)').type('Bob');
-        cy.get(':nth-child(2) > .form-control').type('bob@gmail.com');
-        cy.get('[id="exampleInputPassword1"]').type('12345');
-        cy.get('select').select("Female");
+        const homePage = new Homepage();
 
-        cy.get('.ng-pristine').should('have.value', 'Bob');
+        cy.visit('https://rahulshettyacademy.com/angularpractice/');
+        homePage.getEditBox().type('Nicky');
+        cy.get(':nth-child(2) > .form-control').type('nicky@gmail.com');
+        cy.get('[id="exampleInputPassword1"]').type('12345');
+        homePage.getGender().select("Female");
+
+        homePage.getTwoDataBinding().should('have.value', 'Nicky');
         cy.get('input[name="name"]:nth-child(2)').should('have.attr','minlength','2');
-        cy.get('#inlineRadio3').should('be.disabled');
+        homePage.getEntrepreneaur().should('be.disabled');
 
     });
 
@@ -58,10 +64,33 @@ describe('Framework tests', () => {
 
     it.only('FT - Reg. Complete - Building customized commands', () => {
     
+        const productPage = new Productpage();
+
         cy.visit('https://rahulshettyacademy.com/angularpractice/');
         cy.get(':nth-child(2) > .nav-link').click();
         cy.selectProduct('Blackberry');
+       // cy.pause();
         cy.selectProduct('Nokia Edge');
+        productPage.getCheckOutButton().click();
+        productPage.getFinishPunchaseButton().click();
+        productPage.getAgreeTermsAndConditionsCheckbox().click();
+        productPage.getCountryTextBox().type('Argentina');
+        productPage.getPunchaseButton().click();
+        productPage.getMessageSuccess().should('contain.text', 'Success! Thank you!');        
+        
+    });
+
+    it('FT - Reg. Complete - Using Commands + Fixture data', () => {
+    
+        cy.visit('https://rahulshettyacademy.com/angularpractice/');
+        cy.get(':nth-child(2) > .nav-link').click();
+        
+       // cy.pause();
+        this.data.productNames.forEach(function(element)
+        {
+            cy.selectProduct(element);
+        });
+        
 
         
     });

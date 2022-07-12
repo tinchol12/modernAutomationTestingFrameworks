@@ -2,5 +2,6 @@
   "name": "Bob",
   "gender": "male",
   "email": "bob_from_fixture@gmail.com",
-  "password1": "123456"
+  "password1": "123456",
+  "productNames": ["Blackberry","Nokia Edge"]
 }
