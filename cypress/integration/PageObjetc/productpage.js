@@ -18,12 +18,14 @@ class Productpage
     }
 
     getCountryTextBox(){
-        return cy.get('#country');
+        return cy.get('[id="country"]');
     }
 
     getMessageSuccess(){
         return cy.get('.alert')
     }
+
+  
 
 }
 
