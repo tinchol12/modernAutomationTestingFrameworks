@@ -62,9 +62,11 @@ describe('Framework tests', () => {
 
     });
 
-    it.only('FT - Reg. Complete - Building customized commands', () => {
+    it('FT - Reg. Complete - Building customized commands', () => {
     
-        const productPage = new Productpage();
+        Cypress.config('defaultCommandTimeout', 8000);
+        const productPage = new Productpage();        
+
 
         cy.visit('https://rahulshettyacademy.com/angularpractice/');
         cy.get(':nth-child(2) > .nav-link').click();
@@ -74,9 +76,14 @@ describe('Framework tests', () => {
         productPage.getCheckOutButton().click();
         productPage.getFinishPunchaseButton().click();
         productPage.getAgreeTermsAndConditionsCheckbox().click();
-        productPage.getCountryTextBox().type('Argentina');
+        productPage.getCountryTextBox().type('India');
         productPage.getPunchaseButton().click();
         productPage.getMessageSuccess().should('contain.text', 'Success! Thank you!');        
+
+        cy.get('.alert').then(function(element) {
+            const actualText = element.text();
+            expect(actualText.includes("Success!")).to.be.true            
+        })
         
     });
 
@@ -93,6 +100,43 @@ describe('Framework tests', () => {
         
 
         
+    });
+
+    it('Async sum [TOP]. Validate that the amount of products is valid', () => {
+    
+        Cypress.config('defaultCommandTimeout', 8000);
+        const productPage = new Productpage();        
+        const homePage = new Homepage();
+        var sum = 0;
+
+        cy.visit('https://rahulshettyacademy.com/angularpractice/');
+        cy.get(':nth-child(2) > .nav-link').click();
+        cy.selectProduct('Blackberry');
+        cy.selectProduct('Nokia Edge');
+        productPage.getCheckOutButton().click();
+
+        cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {            
+            /* Need remove the currency from the amount in order to do the sum */
+
+            const amount = $el.text();
+            var res;
+                  res = amount.split(" ")
+                  res  = res[1].trim();
+                  sum = Number(sum) + Number(res)
+                  cy.log(res);
+        }).then(function(){
+                  cy.log(sum);
+        })
+
+        cy.get('h3 strong').then(function(element) {
+           
+            /* Need remove the currency from the amount in order to validate the number */
+            const amountTotal = element.text();
+            var resTotal;
+                resTotal = amountTotal.split(" ")
+                resTotal  = resTotal[1].trim();
+                expect(Number(resTotal)).to.equal(sum);
+        })
     });
 
 });    
