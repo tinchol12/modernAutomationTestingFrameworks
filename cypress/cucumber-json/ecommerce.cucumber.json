@@ -1,0 +1,154 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Buying products from the ecommerce",
+    "line": 1,
+    "id": "buying-products-from-the-ecommerce",
+    "tags": [],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "buying-products-from-the-ecommerce;complete-the-form",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Complete the form",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open the Ecommerce site",
+            "result": {
+              "status": "passed",
+              "duration": 3454000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "gender"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "bob<",
+                      "Male"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 6,
+            "name": "i fill the form detail",
+            "result": {
+              "status": "passed",
+              "duration": 1005000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "bob<"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "validate the form behavior",
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "select the shop page",
+            "result": {
+              "status": "passed",
+              "duration": 2309000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buying-products-from-the-ecommerce;ecommerce-products-are-on-sale-and-the-user-buy-some-of-them",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Ecommerce products are on sale and the user buy some of them",
+        "tags": [
+          {
+            "name": "@Smoke",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I open the Ecommerce site",
+            "result": {
+              "status": "passed",
+              "duration": 674000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "i add items to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 1842000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "validate the total price of the items",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "select the country submit and get a success message",
+            "result": {
+              "status": "passed",
+              "duration": 1521000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

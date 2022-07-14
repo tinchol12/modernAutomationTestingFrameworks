@@ -1,0 +1,151 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-14T12:21:54.396Z",
+    "end": "2022-07-14T12:22:09.476Z",
+    "duration": 15080,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7b0b8c18-62aa-484c-b657-7cabc27e01bd",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\cucumber\\ecommerce.feature",
+      "file": "cypress\\integration\\examples\\cucumber\\ecommerce.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00a9d9d3-8057-4c39-b09c-8627895e4d0d",
+          "title": "Buying products from the ecommerce",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Complete the form",
+              "fullTitle": "Buying products from the ecommerce Complete the form",
+              "timedOut": null,
+              "duration": 6788,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9937af6a-7aef-4088-aee4-5a710985f8ba",
+              "parentUUID": "00a9d9d3-8057-4c39-b09c-8627895e4d0d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ecommerce products are on sale and the user buy some of them",
+              "fullTitle": "Buying products from the ecommerce Ecommerce products are on sale and the user buy some of them",
+              "timedOut": null,
+              "duration": 4057,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "a95dd6db-6470-421b-b8b6-cad3371658ab",
+              "parentUUID": "00a9d9d3-8057-4c39-b09c-8627895e4d0d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9937af6a-7aef-4088-aee4-5a710985f8ba",
+            "a95dd6db-6470-421b-b8b6-cad3371658ab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./mochawesome-reports",
+        "reportFilename": "report",
+        "reportTitle": "Automation Report",
+        "autoOpen": true,
+        "displayDuration": true,
+        "clearOldReports": true,
+        "enableConsole": true,
+        "enableFile": true,
+        "enableJSON": true,
+        "enableXML": true,
+        "logFileName": "./reports/logs.log",
+        "showLog": true,
+        "showPassed": true,
+        "showFailed": true,
+        "showPending": true,
+        "showDuration": true,
+        "showSuiteNumber": true,
+        "showSpecTimings": true,
+        "showSpec": true,
+        "showSuite": true,
+        "showTime": true,
+        "showTotal": true,
+        "showConfiguration": true,
+        "chart": true,
+        "saveColors": true,
+        "overwrite": false,
+        "reportPageTitle": "Test Run Report",
+        "embeddedScreenshots": true,
+        "embeddedVideo": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

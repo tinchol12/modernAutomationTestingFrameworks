@@ -3,6 +3,7 @@ class Productpage
 
     getCheckOutButton(){
         return cy.get('#navbarResponsive > .navbar-nav > .nav-item > .nav-link');
+        
     }
 
     getFinishPunchaseButton(){

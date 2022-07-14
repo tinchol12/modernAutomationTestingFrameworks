@@ -1,0 +1,259 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 4,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-07-14T10:39:46.393Z",
+    "end": "2022-07-14T10:40:02.065Z",
+    "duration": 15672,
+    "testsRegistered": 7,
+    "passPercent": 57.14285714285714,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c2ddcffc-9190-4de3-8187-a3512fc8c7a8",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\testFramework.js",
+      "file": "cypress\\integration\\examples\\testFramework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+          "title": "Framework tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "framework tests - regular completition",
+              "fullTitle": "Framework tests framework tests - regular completition",
+              "timedOut": null,
+              "duration": 4171,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _homepage.default();\ncy.visit('https://rahulshettyacademy.com/angularpractice/');\nhomePage.getEditBox().type('Bob');\ncy.get(':nth-child(2) > .form-control').type('bob@gmail.com');\ncy.get('[id=\"exampleInputPassword1\"]').type('12345');\nhomePage.getGender().select(\"Female\");",
+              "err": {},
+              "uuid": "f22857be-4c49-463f-ac37-22996f359c33",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "framework tests - complete from fixture",
+              "fullTitle": "Framework tests framework tests - complete from fixture",
+              "timedOut": null,
+              "duration": 220,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularpractice/');\ncy.get('[name=\"name\"]:nth-child(2)').type((void 0).data.name);\ncy.get(':nth-child(2) > .form-control').type((void 0).data.email);\ncy.get('[id=\"exampleInputPassword1\"]').type((void 0).data.password1);\ncy.get('select').select((void 0).data.gender);",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'data')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'data')\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\testFramework.js:231:56)",
+                "diff": null
+              },
+              "uuid": "24a0b183-350e-4fa5-8b87-2aae11987e62",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "framework tests - regular completition - adding assertions",
+              "fullTitle": "Framework tests framework tests - regular completition - adding assertions",
+              "timedOut": null,
+              "duration": 1460,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _homepage.default();\ncy.visit('https://rahulshettyacademy.com/angularpractice/');\nhomePage.getEditBox().type('Nicky');\ncy.get(':nth-child(2) > .form-control').type('nicky@gmail.com');\ncy.get('[id=\"exampleInputPassword1\"]').type('12345');\nhomePage.getGender().select(\"Female\");\nhomePage.getTwoDataBinding().should('have.value', 'Nicky');\ncy.get('input[name=\"name\"]:nth-child(2)').should('have.attr', 'minlength', '2');\nhomePage.getEntrepreneaur().should('be.disabled');",
+              "err": {},
+              "uuid": "88b47ed1-537c-4dd3-b764-1050d75ba577",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "framework tests - complete from fixture - adding assertions",
+              "fullTitle": "Framework tests framework tests - complete from fixture - adding assertions",
+              "timedOut": null,
+              "duration": 232,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularpractice/');\ncy.get('[name=\"name\"]:nth-child(2)').type((void 0).data.name);\ncy.get(':nth-child(2) > .form-control').type((void 0).data.email);\ncy.get('[id=\"exampleInputPassword1\"]').type((void 0).data.password1);\ncy.get('select').select((void 0).data.gender);\ncy.get('[class=\"ng-pristine ng-valid ng-touched\"]').should('have.value', (void 0).data.name);",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'data')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'data')\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\testFramework.js:249:56)",
+                "diff": null
+              },
+              "uuid": "11bc34b0-d804-4364-8f3c-ab11db97dc7d",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "FT - Reg. Complete - Building customized commands",
+              "fullTitle": "Framework tests FT - Reg. Complete - Building customized commands",
+              "timedOut": null,
+              "duration": 4777,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.config('defaultCommandTimeout', 8000);\nconst productPage = new _productpage.default();\ncy.visit('https://rahulshettyacademy.com/angularpractice/');\ncy.get(':nth-child(2) > .nav-link').click();\ncy.selectProduct('Blackberry'); // cy.pause();\ncy.selectProduct('Nokia Edge');\nproductPage.getCheckOutButton().click();\nproductPage.getFinishPunchaseButton().click();\nproductPage.getAgreeTermsAndConditionsCheckbox().click();\nproductPage.getCountryTextBox().type('India');\nproductPage.getPunchaseButton().click();\nproductPage.getMessageSuccess().should('contain.text', 'Success! Thank you!');\ncy.get('.alert').then(function (element) {\n  const actualText = element.text();\n  expect(actualText.includes(\"Success!\")).to.be.true;\n});",
+              "err": {},
+              "uuid": "f9c2d2cc-b889-40ed-b26f-d99953ee873d",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "FT - Reg. Complete - Using Commands + Fixture data",
+              "fullTitle": "Framework tests FT - Reg. Complete - Using Commands + Fixture data",
+              "timedOut": null,
+              "duration": 266,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularpractice/');\ncy.get(':nth-child(2) > .nav-link').click(); // cy.pause();\n(void 0).data.productNames.forEach(function (element) {\n  cy.selectProduct(element);\n});",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'data')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'data')\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\testFramework.js:278:14)",
+                "diff": null
+              },
+              "uuid": "f3879046-cc20-4c0c-a0f8-1312b765ae5a",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Async sum [TOP]. Validate that the amount of products is valid",
+              "fullTitle": "Framework tests Async sum [TOP]. Validate that the amount of products is valid",
+              "timedOut": null,
+              "duration": 1339,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.config('defaultCommandTimeout', 8000);\nconst productPage = new _productpage.default();\nconst homePage = new _homepage.default();\nvar sum = 0;\ncy.visit('https://rahulshettyacademy.com/angularpractice/');\ncy.get(':nth-child(2) > .nav-link').click();\ncy.selectProduct('Blackberry');\ncy.selectProduct('Nokia Edge');\nproductPage.getCheckOutButton().click();\ncy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {\n  /* Need remove the currency from the amount in order to do the sum */\n  const amount = $el.text();\n  var res;\n  res = amount.split(\" \");\n  res = res[1].trim();\n  sum = Number(sum) + Number(res);\n  cy.log(res);\n}).then(function () {\n  cy.log(sum);\n});\ncy.get('h3 strong').then(function (element) {\n  /* Need remove the currency from the amount in order to validate the number */\n  const amountTotal = element.text();\n  var resTotal;\n  resTotal = amountTotal.split(\" \");\n  resTotal = resTotal[1].trim();\n  expect(Number(resTotal)).to.equal(sum);\n});",
+              "err": {},
+              "uuid": "a532aa66-6c30-45ac-87dd-3d763f098b02",
+              "parentUUID": "d9c0b012-5d24-49ea-943f-d8f845457de8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f22857be-4c49-463f-ac37-22996f359c33",
+            "88b47ed1-537c-4dd3-b764-1050d75ba577",
+            "f9c2d2cc-b889-40ed-b26f-d99953ee873d",
+            "a532aa66-6c30-45ac-87dd-3d763f098b02"
+          ],
+          "failures": [
+            "24a0b183-350e-4fa5-8b87-2aae11987e62",
+            "11bc34b0-d804-4364-8f3c-ab11db97dc7d",
+            "f3879046-cc20-4c0c-a0f8-1312b765ae5a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12465,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./mochawesome-reports",
+        "reportFilename": "report",
+        "reportTitle": "Automation Report",
+        "autoOpen": true,
+        "displayDuration": true,
+        "clearOldReports": true,
+        "enableConsole": true,
+        "enableFile": true,
+        "enableJSON": true,
+        "enableXML": true,
+        "logFileName": "./reports/logs.log",
+        "showLog": true,
+        "showPassed": true,
+        "showFailed": true,
+        "showPending": true,
+        "showDuration": true,
+        "showSuiteNumber": true,
+        "showSpecTimings": true,
+        "showSpec": true,
+        "showSuite": true,
+        "showTime": true,
+        "showTotal": true,
+        "showConfiguration": true,
+        "chart": true,
+        "saveColors": true,
+        "overwrite": false,
+        "reportPageTitle": "Test tun title",
+        "embeddedScreenshots": true,
+        "embeddedVideo": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

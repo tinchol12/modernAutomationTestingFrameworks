@@ -16,3 +16,49 @@ module.exports = defineConfig({
     specPattern: 'cypress/integration/examples/*.js'
   },
 });
+
+Integrations
+1. npm install --save-dev cypress-cucumber-preprocessor
+2.  setupNodeEvents(on, config) {
+      // implement node event listeners here
+
+      on('file:preprocessor', cucumber())
+    },
+    specPattern: 'cypress/integration/examples/*.js'
+  },
+});
+3. on cypress.config on top 
+  const cucumber = require('cypress-cucumber-preprocessor').default;
+
+4.on package.json
+ "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+
+  5. change the spectPattern for read cucumber files (.features)
+      specPattern: 'cypress/integration/examples/*.js'
+      specPattern: 'cypress/integration/examples/cucumber/*.feature'
+
+   6. Run tagged scenarios cypress -tags run -3 TAGS='not @foo and (@bar or @zap)'   
+      npx cypress run --spec cypress\integration\examples\cucumber\*.feature --headed --browser chrome  
+
+   7. Install cucumber reporter 
+      npm install multiple-cucumber-html-reporter --save-dev
+      create he cucumber-html-reporter.js file
+      run the file: node cucumber-html-report-js
+
+
+1. npm install --save-dev cypress-mochawesome-reporter
+2. Edit config file (cypress.config.js by default)
+
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+  },
+});
+
