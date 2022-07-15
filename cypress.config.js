@@ -48,7 +48,7 @@ module.exports = defineConfig({
 
       on('file:preprocessor', cucumber())
     },
-    //specPattern: 'cypress/integration/examples/*.js'
-    specPattern: 'cypress/integration/examples/cucumber/*.feature'
+    specPattern: 'cypress/integration/examples/*.js'
+   // specPattern: 'cypress/integration/examples/cucumber/*.feature'
   },
 });
