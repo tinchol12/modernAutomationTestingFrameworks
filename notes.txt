@@ -29,6 +29,8 @@ Integrations
 });
 3. on cypress.config on top 
   const cucumber = require('cypress-cucumber-preprocessor').default;
+  test1.feature file 
+  folder must be called same way as the test .feature (test1)
 
 4.on package.json
  "cypress-cucumber-preprocessor": {
