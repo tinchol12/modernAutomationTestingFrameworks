@@ -8,7 +8,9 @@
     "test_chrome": "npx cypress open --browser chrome",
     "test_edge": "npx cypress open --browser edge",
     "report": "npx cypress run --reporter mochawesome",
-    "cucumber_run": "npx cypress run --spec cypress\\integration\\examples\\cucumber\\*.feature --headed --browser chrome"
+    "cucumber_run": "npx cypress run --spec cypress\\integration\\examples\\cucumber\\*.feature --headed --browser chrome",
+    "cucumber_swag": "npx cypress run --spec cypress\\integration\\swag\\*.feature --headed --browser chrome"
+
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,

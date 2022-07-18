@@ -1,0 +1,77 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Exploring Swaglabs demo site",
+    "line": 1,
+    "id": "exploring-swaglabs-demo-site",
+    "tags": [],
+    "uri": "swagcases.feature",
+    "elements": [
+      {
+        "id": "exploring-swaglabs-demo-site;the-user-logs-in-to-the-site",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "The user logs in to the site",
+        "tags": [
+          {
+            "name": "@Swag",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user open swaglabs site",
+            "result": {
+              "status": "passed",
+              "duration": 276000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user complete the username textbox",
+            "result": {
+              "status": "passed",
+              "duration": 412000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user complete the password textbox",
+            "result": {
+              "status": "passed",
+              "duration": 364000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "clicks the login button",
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user should be able to see the shop site",
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
