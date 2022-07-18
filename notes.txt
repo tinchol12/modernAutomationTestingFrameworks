@@ -64,3 +64,10 @@ module.exports = defineConfig({
   },
 });
 
+https://www.saucedemo.com/
+https://parabank.parasoft.com/parabank/index.htm
+http://automationpractice.com/index.php
+https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login
+https://candymapper.com/
+https://the-internet.herokuapp.com/
+
