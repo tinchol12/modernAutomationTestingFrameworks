@@ -27,7 +27,7 @@
             "name": "the user open swaglabs site",
             "result": {
               "status": "passed",
-              "duration": 276000000
+              "duration": 994000000
             }
           },
           {
@@ -37,7 +37,7 @@
             "name": "the user complete the username textbox",
             "result": {
               "status": "passed",
-              "duration": 412000000
+              "duration": 322000000
             }
           },
           {
@@ -47,7 +47,7 @@
             "name": "the user complete the password textbox",
             "result": {
               "status": "passed",
-              "duration": 364000000
+              "duration": 302000000
             }
           },
           {
@@ -57,7 +57,7 @@
             "name": "clicks the login button",
             "result": {
               "status": "passed",
-              "duration": 142000000
+              "duration": 115000000
             }
           },
           {
@@ -67,7 +67,207 @@
             "name": "the user should be able to see the shop site",
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "exploring-swaglabs-demo-site;the-user-logs-in-to-the-site-(shorter-path)",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "The user logs in to the site (Shorter path)",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "the user open swaglabs site",
+            "result": {
+              "status": "passed",
+              "duration": 346000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the user logs in",
+            "result": {
+              "status": "passed",
+              "duration": 703000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the user should be able to see the shop site",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "exploring-swaglabs-demo-site;the-user-add-a-product-in-the-cart",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "The user add a product in the cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "the user open swaglabs site",
+            "result": {
+              "status": "passed",
+              "duration": 453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the user logs in",
+            "result": {
+              "status": "passed",
+              "duration": 679000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the user should be able to see the shop site",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "adds products \"Sauce Labs Backpack\" to the cart from the shop site",
+            "result": {
+              "status": "passed",
+              "duration": 96000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the user clicks on the cart icon",
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "exploring-swaglabs-demo-site;the-user-add-products-with-conditional",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "The user add products with conditional",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "the user open swaglabs site",
+            "result": {
+              "status": "passed",
+              "duration": 262000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the user logs in",
+            "result": {
+              "status": "passed",
+              "duration": 698000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the user should be able to see the shop site",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "adds products \"Sauce Labs Backpack\" to the cart from the shop site",
+            "result": {
+              "status": "passed",
+              "duration": 109000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "adds in order to add the product \"Sauce Labs Bike Light\" the user clicks on the product title name",
+            "result": {
+              "status": "passed",
+              "duration": 118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "the user validates the price is less than $12.00 and adds the product to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "the user clicks on the cart icon",
+            "result": {
+              "status": "passed",
+              "duration": 92000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "the user validates the product is added or not to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "the user clicks the button continue shopping",
+            "result": {
+              "status": "passed",
+              "duration": 96000000
             }
           }
         ]
