@@ -27,6 +27,16 @@ And('the user complete the password textbox', () => {
    swagHome.userPasswordTextbox().type('secret_sauce');
 });
 
+And('the user should be able to see an error message about password is missing', () => {
+    swagHome.errorMessagePasswordRequired().should('have.text', 'Epic sadface: Password is required');    
+});
+
+And('the user should be able to see an error message about user is missing', () => {
+    swagHome.errorMessagePasswordRequired().should('have.text', 'Epic sadface: Username is required');    
+});
+
+
+
 Then('clicks the login button', () => {
     swagHome.btnLogin().click();
 });
@@ -89,7 +99,77 @@ And('the user clicks the button continue shopping', () => {
     swagProducts.continueShoppingButton().click();
 })
 
+And('adds products "Sauce Labs Bolt T-Shirt" to the cart from the shop site', () => {    
+    swagProducts.prodSauceLabsBoltTshirtAddToCartButton().click();
+    swagProducts.prodSauceLabsBoltTshirtRemoveFromCartButton().should('be.visible');
+});
 
+And('adds products "Sauce Labs Onesie" to the cart from the shop site', () => {    
+    swagProducts.prodSauceLabsOnesieAddToCartButton().click();
+    swagProducts.prodSauceLabsOnesieRemoveFromCartButton().should('be.visible');
+});
+
+Then('the user remove a product from the cart', () => {    
+    swagProducts.prodSauceLabsBackpackRemoveFromCartButton().click();
+
+});
+
+And('the user validates the product is removed or not from the cart', () => {    
+    swagProducts.removedCartItem().should('not.be.visible');    
+});
+
+Then('the user clicks on the Checkout button', () => {
+    swagProducts.checkoutButton().click();
+    swagProducts.continueCheckout().should('be.visible');
+    swagProducts.firstNameTextbox().should('be.visible');
+    swagProducts.lastNameTextbox().should('be.visible');
+    swagProducts.zipPostalText().should('be.visible');
+    swagProducts.cancelCheckout().should('be.visible');
+});
+And('the user clicks on the Cancel button', () => {
+    swagProducts.cancelCheckout().click();
+});
+
+Then('the user complete the name textbox', () => {
+    swagProducts.firstNameTextbox().type('John');
+    
+});
+
+And('the user complete the last name textbox', () => {
+    swagProducts.lastNameTextbox().type('Doe');
+});
+
+And('the user complete the postal code textbox', () => {
+    swagProducts.zipPostalText().type('12345');
+});
+
+And('the user complete clear the postal code textbox', () => {
+    swagProducts.zipPostalText().clear();
+});
+
+And('the user complete clear the last name textbox', () => {
+    swagProducts.lastNameTextbox().clear();
+});
+
+And('the user complete clear the name textbox', () => {
+    swagProducts.firstNameTextbox().clear();
+});
+
+And('the user clicks on Continue button', () => {
+    swagProducts.continueCheckout().click();
+});
+
+And('the user must be able to display an error message related to the postal code missing', () => {
+    swagProducts.errorPostalMissingMessage().should('have.text','Error: Postal Code is required');
+});
+
+And('the user must be able to display an error message related to the last name missing', () => {
+    swagProducts.errorPostalMissingMessage().should('have.text','Error: Last Name is required');
+});
+
+And('the user must be able to display an error message related to the name missing', () => {
+    swagProducts.errorPostalMissingMessage().should('have.text','Error: First Name is required');
+});
 
 
 
